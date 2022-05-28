@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>NUFlightMatch</title>
+    <!-- can put meta tags for google to scan -->
+    <!-- GO TO OTHER PAGE: <a href="page.html"> Go to page </a> -->
+    <!-- Little bit of CSS -->
+    <style type="text/css">
+        #main-header{
+            text-align:center;
+            background-color:black;
+            color:white;
+            padding:10px;
+        }
+    </style>
+    <!-- End of CSS -->
 </head>
 <body>
+    <!-- This is how to make comments -->
+    <h1 id="main-header">NU Flight Match</h1>
+    <p>
+        <a href="http://google.com" target="_blank">google</a>
+    </p>
+    <!-- Lists of people with time availabilities -->
+    <ul title="people with same time">
+        <li> List Item 1</li>
+        <li> List Item 2</li>
+        <li> List Item 3</li>
+        <li> List Item 4</li>
 
+    </ul>
+    <!--TABLE FOR AVAILABLE PEOPLE-->
+    <hr>
+    <h3>Availabe Matches</h3>
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Number</th>
+                <th> Time Range</th>
+                <th> About Them </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lisa</td>
+                <td> 2248770742</td>
+                <td>5-6pm</td>
+                <td> Hi, my name is Lisa. I am a sophomore cs major looking for one person to split
+                    an uber with me.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <!--FORM TO INPUT YOUR TIMES-->
+    <h3> Form To Input Your Information </h3>
+    <form action="process.php" method="POST">
+        <div>
+        <label>First Name</label>
+        <input type = "text" name = "firstName">
+    </div>
+    <div>
+        <label>Phone Number</label>
+        <input type = "tel" name = "number">
+    </div>
+    <div>
+        <label>Start Time</label>
+        <input type = "time" name = "startT">
+    </div>
+    <div>
+        <label>End Time</label>
+        <input type = "time" name = "endT">
+    </div>
+    <div>
+        <label>About Me</label>
+        <textarea name = "intro"></textarea>
+    </div>
+    <div>
+        <label>Destination</label>
+        <select name="Destination">
+            <option value="Ohare">Ohare</option>
+            <option value="Evanston">Evanston</option>
+            <option value="Midway">Midway</option>
+        </select>
+    </div>
+    <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <!-- A few more basic HTML notes: -->
+    <!--Image how to-->
+    <!-- <img src="sample.jpg" <- path if in same folder> --> 
+    <!-- link things: <a href="page.html"> Read More </a> -->
+    <!-- HTML5 Semantic tags: header, footer, aside, main, article, nav, section, details-->
 </body>
 </html>
