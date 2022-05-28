@@ -1,11 +1,13 @@
 
 class User{
-    constructor(name, starthour, endhour, dest, phonenum){
-        this.name = name;
+    constructor(first_name, last_name,starthour, endhour, dest, phonenum, loc){
+        this.fname = first_name;
+        this.lname = last_name;
         this.starthour = starthour;
         this.endhour = endhour;
         this.destination = dest;
         this.phonenum = phonenum;
+        this.loc = loc;
     }
 
     getTimeSpan() {
@@ -16,7 +18,7 @@ class User{
 }
 
 const Users = [];
-const Lisa = new User("Lisa", 3, 5, "Ohare", "2248770742");
+const Lisa = new User("Lisa", 3, 5, "Ohare", "2248770742", "North");
 Users.push(Lisa);
 
 
@@ -41,9 +43,12 @@ function updateusers(){
     var eTimeInput = document.getElementById('#fet').value;
     var aboutMeInput = document.getElementById('#abtme').value;
     var destInput = document.getElementById('#dest').value;
-    let newUser = new User(nameInput, sTimeInput, eTimeInput, destInput, numberInput);
+    var LocInput = document.getElementById('#loc').value;
+    var lastInput = document.getElementById('#lname').value;
+    let newUser = new User(nameInput, lastInput, sTimeInput, eTimeInput, destInput, numberInput, LocInput);
     Users.push(newUser);
     console.log(Users);
+
 }
 
 

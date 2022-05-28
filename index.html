@@ -58,10 +58,14 @@
     <!--FORM TO INPUT YOUR TIMES-->
     <h3> Form To Input Your Information </h3>
     <form action="process.php" method="POST" id="info-form">
-        <div>
+         <div>
         <label>First Name</label>
         <input type="text" id="fname" name="firstName">
-    </div>
+     </div>
+     <div>
+         <label>Last Name</label>
+         <input type = "text" id = "lname" name ="lastname">
+     </div>
     <div>
         <label>Phone Number</label>
         <input type="tel"  id="fnum" name="number">
@@ -86,7 +90,11 @@
             <option value="Midway">Midway</option>
         </select>
     </div>
-    <button type="button" onclick="updateusers();"> Submit </button>
+    <div>
+        <label>Location On Campus</label>
+        <input type = "location" id = "loc" name = "PartOnCampus">
+    </div>
+    <button type="button" onclick= "updateusers();"> Submit </button>
     <!-- <input type="submit" name="submit" value="Submit"> -->
     </form>
 
