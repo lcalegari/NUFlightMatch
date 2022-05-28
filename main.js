@@ -19,8 +19,8 @@ class User{
 }
 
 const Users = [];
-const Lisa = new User("Lisa", "Calegari", "15:00", "17:00", "Ohare", "2248770742", "North", "hi, this is an example entry");
-Users.push(Lisa);
+//const Lisa = new User("Lisa", "Calegari", "15:00", "17:00", "Ohare", "-", "North", "hi, this is an example entry");
+//Users.push(Lisa);
 
 
 
