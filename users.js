@@ -33,6 +33,7 @@ function handleSubmit(event) {
     const newUser = new User(value.firstName, value.lastname, value.startT, value.endT, value.Destination, value.number, value.PartOnCampus);
     Users.push(newUser);
     console.log(Users);
+    addToTable();
 }
 const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
@@ -45,3 +46,29 @@ alert('javascript working');
 
 //Source referenced: https://stackoverflow.com/questions/53819881/html-form-input-into-javascript-array
 //SOurce referenced: https://www.learnwithjason.dev/blog/get-form-values-as-json
+
+//Source referenced: https://stackoverflow.com/questions/29335369/display-array-of-objects-in-a-dynamic-table-javascript
+
+//Enter Users Data in Table
+function addToTable(){
+var html = "<table border='1|1'>";
+html+="<tr>";
+html+="<th> First Name </th>";
+html+="<th> Starting Availability </th>";
+html+="<th> Ending Availability </th>";
+html+="<th> From </th>";
+html+="<th> To </th>";
+html+="<th> Phone Number! </th>";
+for (var i = 0; i < Users.length; i++) {
+    html+="<tr>";
+    html+="<td>"+Users[i].fname+"</td>";
+    html+="<td>"+Users[i].starthour+"</td>";
+    html+="<td>"+Users[i].endhour+"</td>";
+    html+="<td>"+Users[i].loc+"</td>";
+    html+="<td>"+Users[i].destination+"</td>";
+    html+="<td>"+Users[i].phonenum+"</td>";
+    html+="</tr>";
+}
+html+="</table>";
+document.getElementById("box").innerHTML = html;
+}
