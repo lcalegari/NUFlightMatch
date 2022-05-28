@@ -48,7 +48,7 @@ function handleSubmit(event) {
         alert("enter a valid current location: North or South");
         exit;
     }
-    if(value.PartOnCampus != "North" || value.PartOnCampus != "South"){
+    if(!(value.PartOnCampus=== "North" || value.PartOnCampus === "South")){
         alert("enter a valid current location: North or South");
         exit;
     }
