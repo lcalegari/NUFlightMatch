@@ -63,10 +63,6 @@ form.addEventListener('submit', handleSubmit);
 
 
 
-
-alert('javascript working');
-
-
 //Source referenced: https://stackoverflow.com/questions/53819881/html-form-input-into-javascript-array
 //SOurce referenced: https://www.learnwithjason.dev/blog/get-form-values-as-json
 
