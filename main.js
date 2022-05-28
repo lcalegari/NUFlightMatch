@@ -48,6 +48,10 @@ function handleSubmit(event) {
         alert("enter a valid current location: North or South");
         exit;
     }
+    if(value.PartOnCampus != "North" | value.PartOnCampus != "South"){
+        alert("enter a valid current location: North or South");
+        exit;
+    }
     
     const newUser = new User(value.firstName, value.lastname, value.startT, value.endT, value.Destination, value.number, value.PartOnCampus, value.intro);
     Users.push(newUser);
