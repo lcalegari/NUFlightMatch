@@ -1,6 +1,6 @@
 
 class User{
-    constructor(first_name, last_name, starthour, endhour, dest, phonenum, loc){
+    constructor(first_name, last_name, starthour, endhour, dest, phonenum, loc, aboutme){
         this.fname = first_name;
         this.lname = last_name;
         this.starthour = starthour;
@@ -8,6 +8,7 @@ class User{
         this.destination = dest;
         this.phonenum = phonenum;
         this.loc = loc;
+        this.aboutme = aboutme;
     }
 
     getTimeSpan() {
@@ -18,7 +19,7 @@ class User{
 }
 
 const Users = [];
-const Lisa = new User("Lisa", "Calegari", 3, 5, "Ohare", "2248770742", "North");
+const Lisa = new User("Lisa", "Calegari", "15:00", "17:00", "Ohare", "2248770742", "North", "hi, this is an example entry");
 Users.push(Lisa);
 
 
@@ -34,7 +35,21 @@ function handleSubmit(event) {
         alert("enter a valid first and last name");
         exit;
     }
-    const newUser = new User(value.firstName, value.lastname, value.startT, value.endT, value.Destination, value.number, value.PartOnCampus);
+    if(!(isNaN(value.startT)) || !(isNaN(value.endT))){
+        alert("enter valid start and end times");
+        exit;
+    }
+    //TODO: find more reliable check ^^
+    if(value.number === "" || (value.number).length != 10){
+        alert("enter valid 10 digit phone number, just enter the numbers");
+        exit;
+    }
+    if(value.PartOnCampus === ""){
+        alert("enter a valid current location");
+        exit;
+    }
+    
+    const newUser = new User(value.firstName, value.lastname, value.startT, value.endT, value.Destination, value.number, value.PartOnCampus, value.intro);
     Users.push(newUser);
     console.log(Users);
     addToTable();
@@ -62,6 +77,7 @@ html+="<th> Starting Availability </th>";
 html+="<th> Ending Availability </th>";
 html+="<th> From </th>";
 html+="<th> To </th>";
+html+="<th> Bio </th>";
 html+="<th> Phone Number! </th>";
 for (var i = 0; i < Users.length; i++) {
     html+="<tr>";
@@ -70,6 +86,7 @@ for (var i = 0; i < Users.length; i++) {
     html+="<td>"+Users[i].endhour+"</td>";
     html+="<td>"+Users[i].loc+"</td>";
     html+="<td>"+Users[i].destination+"</td>";
+    html+="<td>"+Users[i].aboutme+"</td>";
     html+="<td>"+Users[i].phonenum+"</td>";
     html+="</tr>";
 }
