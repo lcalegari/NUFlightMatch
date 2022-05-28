@@ -11,8 +11,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29nnLlmH5KRHrh3d8pRj7QLG7AN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,6 +41,7 @@
       <updated>1653757670403</updated>
       <workItem from="1653757673342" duration="67000" />
       <workItem from="1653757864004" duration="24000" />
+      <workItem from="1653760184683" duration="267000" />
     </task>
     <servers />
   </component>
