@@ -45,7 +45,7 @@ function handleSubmit(event) {
         exit;
     }
     if(value.PartOnCampus === ""){
-        alert("enter a valid current location");
+        alert("enter a valid current location: North or South");
         exit;
     }
     
