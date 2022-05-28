@@ -30,6 +30,10 @@ function handleSubmit(event) {
     const data = new FormData(event.target);
     const value = Object.fromEntries(data.entries());
     console.log({value});
+    if(value.firstName === "" || value.lastname === ""){
+        alert("enter a valid first and last name");
+        exit;
+    }
     const newUser = new User(value.firstName, value.lastname, value.startT, value.endT, value.Destination, value.number, value.PartOnCampus);
     Users.push(newUser);
     console.log(Users);
