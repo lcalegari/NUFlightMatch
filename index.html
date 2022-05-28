@@ -57,36 +57,37 @@
     <hr>
     <!--FORM TO INPUT YOUR TIMES-->
     <h3> Form To Input Your Information </h3>
-    <form action="process.php" method="POST">
+    <form action="process.php" method="POST" id="info-form">
         <div>
         <label>First Name</label>
-        <input type = "text" name = "firstName">
+        <input type="text" id="fname" name="firstName">
     </div>
     <div>
         <label>Phone Number</label>
-        <input type = "tel" name = "number">
+        <input type="tel"  id="fnum" name="number">
     </div>
     <div>
         <label>Start Time</label>
-        <input type = "time" name = "startT">
+        <input type="time"  id="fst" name="startT">
     </div>
     <div>
         <label>End Time</label>
-        <input type = "time" name = "endT">
+        <input type="time" id="fet" name="endT" >
     </div>
     <div>
         <label>About Me</label>
-        <textarea name = "intro"></textarea>
+        <textarea id="abtme" name="intro" ></textarea>
     </div>
     <div>
         <label>Destination</label>
-        <select name="Destination">
+        <select name="Destination" id="dest">
             <option value="Ohare">Ohare</option>
             <option value="Evanston">Evanston</option>
             <option value="Midway">Midway</option>
         </select>
     </div>
-    <input type="submit" name="submit" value="Submit">
+    <button type="button" onclick="updateusers();"> Submit </button>
+    <!-- <input type="submit" name="submit" value="Submit"> -->
     </form>
 
     <!-- A few more basic HTML notes: -->
@@ -94,5 +95,9 @@
     <!-- <img src="sample.jpg" <- path if in same folder> --> 
     <!-- link things: <a href="page.html"> Read More </a> -->
     <!-- HTML5 Semantic tags: header, footer, aside, main, article, nav, section, details-->
+
+<!--JAVASCRIPT-->
+<!-- <script src="main.js"></script> -->
+<script src="users.js"></script>
 </body>
 </html>
