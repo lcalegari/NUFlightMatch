@@ -10,13 +10,14 @@ let age = 30;
 age = 31;
 
 
-function User(name, starthour, endhour, date, dest, phonenum){
+function User(name, starthour, endhour, date, dest, phonenum, loc){
     this.name = name;
     this.starthour = starthour;
     this.endhour = endhour;
     this.date = date;
     this.destination = dest;
     this.phonenum = phonenum;
+    this.loc = loc;
 }
 
 User.prototype.getTimeSpan = function() {
@@ -48,7 +49,8 @@ const Users = [
         "starttime": Lisa.starthour,
         "endtime": Lisa.endhour,
         "destination": Lisa.destination,
-        "phonenumber": Lisa.phonenum
+        "phonenumber": Lisa.phonenum,
+        "location": Lisa.loc
     } //,
 
     //{
@@ -117,7 +119,10 @@ let num1 = 2;
 //btn.style.background = 'red';
 //const color2 = 'purple';
 const btn = document.querySelector('.btn');
-btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.body.style.background = '#ccc';
-});
+
+function updateusers() {
+    console.log("Button was clicked!")
+    
+
+}
+btn.addEventListener('click', updateusers());
