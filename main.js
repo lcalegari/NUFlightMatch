@@ -18,7 +18,7 @@ class User{
     }
 }
 
-const Users = [];
+var Users = [];
 var storeddata = JSON.stringify(Users);
 //const Lisa = new User("Lisa", "Calegari", "15:00", "17:00", "Ohare", "-", "North", "hi, this is an example entry");
 //Users.push(Lisa);
