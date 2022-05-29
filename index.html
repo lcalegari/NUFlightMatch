@@ -2,66 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>NUFlightMatch</title>
     <!-- can put meta tags for google to scan -->
     <!-- GO TO OTHER PAGE: <a href="page.html"> Go to page </a> -->
     <!-- Little bit of CSS -->
-    <style type="text/css">
-        #main-header{
-            text-align:center;
-            background-color:black;
-            color:white;
-            padding:10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- End of CSS -->
 </head>
 <body>
-    <!-- This is how to make comments -->
-    <h1 id="main-header">NU Flight Match</h1> 
+    <h1 id="main-header">NU FLIGHT MATCH</h1>
+    <h2>"Because we hate seeing GroupMe spam just as much as you do"</h2>
+    <img src="images/northwestern-logo.png" width = 80 height = 120 alt="Northwestern Logo">
     <!--TABLE FOR AVAILABLE PEOPLE-->
-    <hr>
-    <h3>Availabe Matches</h3>
+    <hr noshade>
+    <h3>Available Matches: </h3>
     <p id="box"></p>
     <br>
-    <hr>
+    <hr noshade>
     <!--FORM TO INPUT YOUR TIMES-->
-    <h3> Form To Input Your Information </h3>
+    <h3> Form To Input Your Information: </h3>
     <form id="info-form">
-         <div>
-        <label>First Name</label>
+        <div class="field-marker">
+        <label>First Name: </label>
         <input type="text" id="fname" name="firstName">
      </div>
-     <div>
-         <label>Last Name</label>
+     <div class="field-marker">
+         <label>Last Name: </label>
          <input type = "text" id = "lname" name ="lastname">
      </div>
-    <div>
-        <label>Phone Number</label>
+    <div class="field-marker">
+        <label>Phone Number: </label>
         <input type="tel"  id="fnum" name="number">
     </div>
-    <div>
-        <label>Start Time</label>
+    <div class="field-marker">
+        <label>Start Time: </label>
         <input type="time"  id="fst" name="startT">
     </div>
-    <div>
-        <label>End Time</label>
+    <div class="field-marker">
+        <label>End Time: </label>
         <input type="time" id="fet" name="endT" >
     </div>
-    <div>
-        <label>About Me</label>
+    <div class="field-marker">
+        <label>About Me: </label>
         <textarea id="abtme" name="intro" ></textarea>
     </div>
-    <div>
-        <label>Destination</label>
+    <div class="field-marker">
+        <label>Destination: </label>
         <select name="Destination" id="dest">
             <option value="Ohare">Ohare</option>
             <option value="Evanston">Evanston</option>
             <option value="Midway">Midway</option>
         </select>
     </div>
-    <div>
-        <label>Location On Campus</label>
+    <div class="field-marker">
+        <label>Location On Campus: </label>
         <input type = "location" id = "loc" name = "PartOnCampus">
     </div>
     <button type="submit"> Submit </button>
@@ -78,3 +76,4 @@
 <script src="main.js"></script>
 </body>
 </html>
+
