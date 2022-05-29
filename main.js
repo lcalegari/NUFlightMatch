@@ -19,6 +19,7 @@ class User{
 }
 
 const Users = [];
+var storeddata = JSON.stringify(Users);
 //const Lisa = new User("Lisa", "Calegari", "15:00", "17:00", "Ohare", "-", "North", "hi, this is an example entry");
 //Users.push(Lisa);
 
@@ -56,6 +57,7 @@ function handleSubmit(event) {
     const newUser = new User(value.firstName, value.lastname, value.startT, value.endT, value.Destination, value.number, value.PartOnCampus, value.intro);
     Users.push(newUser);
     console.log(Users);
+    storeddata = JSON.stringify(Users);
     addToTable();
 }
 const form = document.querySelector('form');
@@ -70,6 +72,7 @@ form.addEventListener('submit', handleSubmit);
 
 //Enter Users Data in Table
 function addToTable(){
+    Users = JSON.parse(storeddata);
 var html = "<table border='1|1'>";
 html+="<tr>";
 html+="<th> First Name </th>";
